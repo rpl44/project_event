@@ -29,6 +29,7 @@ section.pricing {
 
 .card-body-a {
  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+ border-radius: 1rem;
 }
 
 .pricing .card-price .period {
