@@ -59,11 +59,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="{{route('/')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about"> About</a></li>
-                        <li class="nav-item"><a  href="#blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#maps">Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link smooth-class" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-class" href="#about"> About</a></li>
+                        <li class="nav-item"><a class="smooth-class" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-class" href="#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-class" href="#maps">Contact</a></li>
                     </ul>
                     <ul class="navbar-nav justify-content-end">
                         <a class="tp_btn" href="#">Login</a>
@@ -74,7 +74,7 @@
         <!--================End Header Menu Area =================-->
 
         <!--================Slider Area =================-->
-        <section class="main_slider_area">
+        <section class="main_slider_area" id="home">
             <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
                 <ul>
                     <li data-index="rs-2946" data-transition="slidevertical" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -333,7 +333,67 @@
             </div>
         </section>
         <!--================End Our Service Area =================-->
+        <section id="pricing" class="pricing py-5">
+            <div class="container">
+                <div class="row">
+                <!-- Free Tier -->
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                    <div class="card-body">
+                        <link href="css/pricing.css" rel="stylesheet">
+                        <h5 class="card-title text-muted text-uppercase">Early Bird</h5>
+                        <h6 class="card-price "><sup>$</sup>219<span class="period">/Person</span></h6>
+                        <br>
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-check" style="color: green"></i>Get Access to all Sessions</li>
+                            <li><i class="fa-li fa fa-check" style="color: green"></i>5GB Storage</li>
+                            <li><i class="fa-li fa fa-close" style="color: red"></i>Meet with Favorite Speakers</li>
+                            <li><i class="fa-li fa fa-close" style="color: red"></i>Access to all Audio and Video Files</li>
+                        </ul>
+                        <a href="#" ss="btn btn-block btn-primary" button type="button" class="btn btn-primary"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;</button>JOIN NOW</a>
+                </div>
+            </div>
+      </div>
 
+      <!-- Plus Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body card-body-a">
+            <div class="grad">
+            <h5 class="card-title text-muted text-uppercase ">Regular</h5>
+            <h6 class="card-price"><sup>$</sup>310<span class="period">/Person</span></h6>
+            <br>
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check" style="color: green"></i>Get Access to al Sessions</li>
+              <li><i class="fa-li fa fa-check" style="color: green"></i>Unlimited Coffe and Foods</li>
+              <li><i class="fa-li fa fa-check" style="color: green"></i>Meet with Favorite Speakers</li>
+              <li><i class="fa-li fa fa-close" style="color: red"></i>Access to all Audio and Video Files</li>
+            </ul>
+            <a href="#" ss="btn btn-block btn-primary" button type="button" class="btn btn-primary"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;</button>JOIN NOW</a>
+          </div>
+        </div>
+      </div>
+  </div>
+      <!-- Pro Tier -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase ">Last Chance</h5>
+            <h6 class="card-price "><sup>$</sup>397<span class="period">/Person</span></h6>
+            <br>
+            <ul class="fa-ul">
+             <li><i class="fa-li fa fa-check" style="color: green"></i>Get Access to all Sessions</li>
+             <li><i class="fa-li fa fa-check" style="color: green"></i>Unlimited Coffe and Foods</li>
+             <li><i class="fa-li fa fa-check" style="color: green"></i>Meet with Favorite Speakers</li>
+             <li><i class="fa-li fa fa-check" style="color: green"></i>Get Access to all Audio and Video File</li>
+            </ul>
+            <a href="#" ss="btn btn-block btn-primary" button type="button" class="btn btn-primary"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;</button>JOIN NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         <!--================Testimonials Area =================-->
         <section class="testimonials_area p_100">
             <div class="container">
@@ -548,31 +608,20 @@ function topFunction() {
 
         <script src="js/theme.js"></script>
         <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+            $(document).ready(function(){
+                $(".smooth-class").on('click', function(event) {
+                    if (this.hash !== "") {
+                    event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
