@@ -1,5 +1,4 @@
 section.pricing {
-  background: 
   background: linear-gradient(to right);
 }
 
@@ -76,3 +75,4 @@ section.pricing {
   .pricing .card:hover .btn {
     opacity: 1;
   }
+}
