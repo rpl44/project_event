@@ -2039,7 +2039,7 @@ Section 1
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: blue; /* Add a dark-grey background on hover */
 }
 
 /* End Footer Area css
