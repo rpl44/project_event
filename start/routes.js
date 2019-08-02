@@ -16,5 +16,6 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('index')
-Route.on('/static').render('static')
+Route.get('/').render('index')
+Route.get('/static').render('static')
+Route.get('/login').render('login')
