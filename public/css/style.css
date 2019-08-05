@@ -515,7 +515,7 @@ i:before {
   height: 65px;
   visibility: hidden;
 }
-Section 1
+/*Section 1
 
 /* End Banner Area css
 ============================================================================================ */
@@ -775,6 +775,7 @@ Section 1
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 13px;
+  border-radius: 5px;
   text-transform: uppercase;
   background-image: -webkit-gradient(linear, left top, right top, from(#ff00cc), color-stop(51%, #ff33cc), to(#ff66cc));
   background-image: -webkit-linear-gradient(left, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
@@ -788,25 +789,13 @@ Section 1
   -webkit-transition: all 400ms ease-out;
   -o-transition: all 400ms ease-out;
   transition: all 400ms ease-out;
-}
-
-.read_btn:before {
-  content: "";
-  background: #ff00cc;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  width: 98%;
-  height: 42px;
-  z-index: -1;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
+  border: 0;
 }
 
 .read_btn:hover {
   background-position: right center;
   color: #000000;
+  cursor:w-resize;
 }
 
 .tp_btn {
