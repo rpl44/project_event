@@ -243,7 +243,7 @@ i:before {
 }
 
 .main_menu_area .navbar .navbar-nav li:hover a, .main_menu_area .navbar .navbar-nav li.active a {
-  color: #2bc0a4;
+  color: #ff00cc;
 }
 
 @media (min-width: 992px) {
@@ -543,7 +543,7 @@ Section 1
 /* Creative Feature Area css
 ============================================================================================ */
 .creative_feature_area {
-  background: #f7f7f7;
+  background: #ff66cc;
 }
 
 .c_feature_box {
@@ -568,7 +568,7 @@ Section 1
 
 .c_box_item:before {
   content: "";
-  background: #e5e5e5;
+  background: #ff33cc;
   height: 145px;
   width: 1px;
   position: absolute;
@@ -771,15 +771,15 @@ Section 1
   height: 46px;
   width: 160px;
   line-height: 48px;
-  color: #232d37;
+  color: #fff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
-  background-image: -webkit-gradient(linear, left top, right top, from(#744fff), color-stop(51%, #21d397), to(#744fff));
-  background-image: -webkit-linear-gradient(left, #744fff 0%, #21d397 51%, #744fff 100%);
-  background-image: -o-linear-gradient(left, #744fff 0%, #21d397 51%, #744fff 100%);
-  background-image: linear-gradient(to right, #744fff 0%, #21d397 51%, #744fff 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff00cc), color-stop(51%, #ff33cc), to(#ff66cc));
+  background-image: -webkit-linear-gradient(left, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
+  background-image: -o-linear-gradient(left, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
+  background-image: linear-gradient(to right, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
   text-align: center;
   position: relative;
   background-size: 200% auto;
@@ -792,7 +792,7 @@ Section 1
 
 .read_btn:before {
   content: "";
-  background: #f7f7f7;
+  background: #ff00cc;
   position: absolute;
   left: 2px;
   top: 2px;
@@ -806,7 +806,7 @@ Section 1
 
 .read_btn:hover {
   background-position: right center;
-  color: #232d37;
+  color: #ff33cc;
 }
 
 .tp_btn {
@@ -816,10 +816,10 @@ Section 1
   color: #fff;
   border-width: 2px;
   border-style: solid;
-  border-image: -moz-linear-gradient(180deg, #20d497 0%, #744fff 100%);
-  -webkit-border-image: -webkit-linear-gradient(180deg, #20d497 0%, #744fff 100%);
-  border-image: -webkit-linear-gradient(180deg, #20d497 0%, #744fff 100%);
-  border-image: -ms-linear-gradient(180deg, #20d497 0%, #744fff 100%);
+  border-image: -moz-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
+  -webkit-border-image: -webkit-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
+  border-image: -webkit-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
+  border-image: -ms-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
   border-image-slice: 1;
   display: block;
   line-height: 42px;
@@ -843,10 +843,10 @@ Section 1
   top: -2px;
   border-width: 2px;
   border-style: solid;
-  border-image: -moz-linear-gradient(180deg, #744fff 0%, #20d497 100%);
-  -webkit-border-image: -webkit-linear-gradient(180deg, #744fff 0%, #20d497 100%);
-  border-image: -webkit-linear-gradient(180deg, #744fff 0%, #20d497 100%);
-  border-image: -ms-linear-gradient(180deg, #744fff 0%, #20d497 100%);
+  border-image: -moz-linear-gradient(180deg, #ff00cc 0%, #ff33cc 100%);
+  -webkit-border-image: -webkit-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
+  border-image: -webkit-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
+  border-image: -ms-linear-gradient(180deg, #ff33cc 0%, #ff00cc 100%);
   border-image-slice: 1;
   -webkit-transition: all 400ms ease-out;
   -o-transition: all 400ms ease-out;
@@ -1778,7 +1778,7 @@ Section 1
 /* Footer Area css
 ============================================================================================ */
 .footer_widgets_area {
-  background: #131627;
+  background: #000000;
   overflow: hidden;
   padding: 80px 0px;
 }
@@ -1976,7 +1976,7 @@ Section 1
 }
 
 .copy_right_area {
-  background: #04081d;
+  background: #000000;
   overflow: hidden;
 }
 
@@ -1998,7 +1998,7 @@ Section 1
 }
 
 .copy_right_area .float-md-left h5 a:hover {
-  color: #2bc0a4;
+  color: #000000;
 }
 
 .copy_right_area .float-md-right .nav li {
@@ -2009,7 +2009,7 @@ Section 1
   padding: 0px;
   line-height: 50px;
   font-size: 14px;
-  color: #51545f;
+  color: #000000;
   -webkit-transition: all 400ms linear 0s;
   -o-transition: all 400ms linear 0s;
   transition: all 400ms linear 0s;
@@ -2020,7 +2020,7 @@ Section 1
 }
 
 .copy_right_area .float-md-right .nav li:hover a {
-  color: #2bc0a4;
+  color: #000000;
 }
 #myBtn {
   display: none; /* Hidden by default */
@@ -2031,7 +2031,7 @@ Section 1
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
  /* Set a background color */
-  color: blue; /* Text color */
+  color: pink; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
