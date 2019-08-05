@@ -795,7 +795,7 @@ i:before {
 .read_btn:hover {
   background-position: right center;
   color: #000000;
-  cursor:w-resize;
+  cursor:pointer;
 }
 
 .tp_btn {
