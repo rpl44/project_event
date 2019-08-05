@@ -775,7 +775,7 @@ i:before {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 13px;
-  border-radius: 5px;
+  border-radius: 2.5px;
   text-transform: uppercase;
   background-image: -webkit-gradient(linear, left top, right top, from(#ff00cc), color-stop(51%, #ff33cc), to(#ff66cc));
   background-image: -webkit-linear-gradient(left, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
