@@ -806,7 +806,7 @@ Section 1
 
 .read_btn:hover {
   background-position: right center;
-  color: #ff33cc;
+  color: #000000;
 }
 
 .tp_btn {
@@ -1358,7 +1358,7 @@ Section 1
   line-height: 26px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #1e1e27;
+  color: #ff00cc;
   padding-bottom: 7px;
   -webkit-transition: all 400ms linear 0s;
   -o-transition: all 400ms linear 0s;
@@ -1366,7 +1366,7 @@ Section 1
 }
 
 .r_news_widget .news_inner .news_item h4:hover {
-  color: #2bc0a4;
+  color: #ff33cc;
 }
 
 .r_news_widget .news_inner .news_item h6 {
