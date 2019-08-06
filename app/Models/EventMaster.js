@@ -7,8 +7,8 @@ class EventMaster extends Model {
     event_details(){
         return this.hasOne('App/Models/EventDetail')
     }
-    ticket(){
-        return this.hasMany('App/Models/Ticket')
+    products(){
+        return this.hasMany('App/Models/Product')
     }
 }
 

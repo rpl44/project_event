@@ -49,8 +49,8 @@ class AccountMaster extends Model {
     payments(){
         return this.hasMany('App/Models/Payment')
     }
-    tickets(){
-        return this.hasMany('App/Models/Ticket')
+    products(){
+        return this.hasMany('App/Models/Product')
     }
 }
 

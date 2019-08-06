@@ -4,9 +4,6 @@
 const Model = use('Model')
 
 class Payment extends Model {
-    tickets(){
-        return this.hasMany('App/Models/Tickets')
-    }
 }
 
 module.exports = Payment
