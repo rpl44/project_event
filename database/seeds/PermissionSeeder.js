@@ -28,6 +28,7 @@ class PermissionSeeder {
     p.create_events = true
     p.create_posts = true
     p.create_products = true
+    p.create_tickets = true
     p.give_balances = true
     p.view_payment_history = true
 
@@ -46,6 +47,7 @@ class PermissionSeeder {
     p2.create_events = true
     p2.create_posts = true
     p2.create_products = true
+    p2.create_tickets = true
     p2.give_balances = true
     p2.view_payment_history = false
 
