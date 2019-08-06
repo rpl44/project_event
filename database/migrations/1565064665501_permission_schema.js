@@ -23,7 +23,6 @@ class PermissionSchema extends Schema {
       table.boolean('give_balances').defaultTo(false)
       table.boolean('view_payment_history').defaultTo(false)
       table.timestamps()
-      table.datetime('deleted_at').nullable()
     })
   }
 
