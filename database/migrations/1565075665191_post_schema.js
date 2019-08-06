@@ -7,11 +7,10 @@ class PostSchema extends Schema {
   up () {
     this.create('posts', (table) => {
       table.increments()
-      table.integer('account_id').references('id').inTable('account_masters')
-      table.string('title', 255).notNullable()
-      table.text('description').notNullable()
+      table.integer('account_id').references('id').inTable('accounts')
+      table.string('title',255).notNullable()
+      table.text('path_url').notNullable()
       table.timestamps()
-      table.datetime('deleted_at').notNullable()
     })
   }
 

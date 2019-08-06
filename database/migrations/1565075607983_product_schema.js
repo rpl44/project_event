@@ -7,12 +7,11 @@ class ProductSchema extends Schema {
   up () {
     this.create('products', (table) => {
       table.increments()
-      table.string('product_code', 6).unique().notNullable()
-      table.integer('account_id').references('id').inTable('account_masters')
-      table.text('product_name').notNullable()
-      table.integer('product_price').unsigned().notNullable()
-      table.integer('total').unsigned().nullable()
-      table.string('category', 255).notNullable()
+      table.integer('account_id').references('id').inTable('accounts')
+      table.integer('event_id').references('id').inTable('events')
+      table.text('name').notNullable()
+      table.text('image').nullable()
+      table.integer('price').unsigned().notNullable()
       table.timestamps()
       table.datetime('deleted_at').nullable()
     })

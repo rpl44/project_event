@@ -7,12 +7,11 @@ class AddressSchema extends Schema {
   up () {
     this.create('addresses', (table) => {
       table.increments()
-      table.text('street_name').nullable()
-      table.string('city', 255).nullable()
-      table.string('country', 255).nullable()
-      table.string('post_code').nullable()
+      table.text('street').notNullable()
+      table.string('city',255).notNullable()
+      table.string('country', 255).notNullable()
+      table.string('postcode', 10).notNullable()
       table.timestamps()
-      table.datetime('deleted_at').nullable()
     })
   }
 

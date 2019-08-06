@@ -38,7 +38,7 @@ class PermissionSeeder {
     p2.permission_name = "Administrator"
     p2.manage_balances = true
     p2.manage_events = true
-    p2.manage_members = true
+    p2.manage_members = false
     p2.manage_payments = true
     p2.manage_posts = true
     p2.manage_products = true

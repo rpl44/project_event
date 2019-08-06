@@ -4,8 +4,8 @@
 const Model = use('Model')
 
 class Permission extends Model {
-    account_details(){
-        return this.hasMany('App/Models/AccountDetail')
+    accounts(){
+        return this.hasMany('App/Models/Account')
     }
 }
 

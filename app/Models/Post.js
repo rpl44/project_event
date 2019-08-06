@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Post extends Model {
     post_actions(){
-        return this.hasMany('App/Models/PostAction')
+        return this.hasMany('App/Models/')
     }
 }
 
