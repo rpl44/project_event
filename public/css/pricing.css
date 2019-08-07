@@ -1,6 +1,6 @@
 section.pricing {
   background: #D3D3D3;
-  background: linear-gradient(to right, #D3D3D3,  #D3D3D3);
+  background: url(../img/home-slider/slider-1.jpg);
 }
 
 .pricing .card {

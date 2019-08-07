@@ -75,6 +75,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
   padding: 0px;
 }
 
+.tampilan{
+  background: #d3d3d3;
+  background: linear-gradient(to right, #d3d3d3, #d3d3d3)
+}
+
 #success {
   display: none;
 }
@@ -1031,7 +1036,7 @@ i:before {
 
 .service_item i {
   background-image: -moz-linear-gradient(180deg, #ff2172 0%, #9f48f0 100%);
-  background-image: -webkit-linear-gradient(180deg, #ff2172  0%, #9f48f0 100%);
+  background-image: -webkit-linear-gradient(180deg, #ff2172 0%, #9f48f0 100%);
   background-image: -ms-linear-gradient(180deg, #ff2172 0%, #9f48f0 100%);
   color: transparent;
   -webkit-background-clip: text;
