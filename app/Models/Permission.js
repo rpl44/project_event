@@ -4,8 +4,9 @@
 const Model = use('Model')
 
 class Permission extends Model {
-    accounts(){
-        return this.hasMany('App/Models/Account')
+    account(){
+        return this.hasOne('App/Models/Account')
+        table.timestamps()
     }
 }
 

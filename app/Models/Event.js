@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Event extends Model {
+    products(){
+        return this.hasMany('App/Models/Product')
+    }
 }
 
 module.exports = Event

@@ -13,13 +13,16 @@ class PermissionSchema extends Schema {
       table.boolean('manage_members').defaultTo(false)
       table.boolean('manage_products').defaultTo(false)
       table.boolean('manage_payments').defaultTo(false)
+      table.boolean('manage_posts').defaultTo(false)
       table.boolean('manage_roles').defaultTo(false)
       table.boolean('manage_tickets').defaultTo(false)
       table.boolean('create_events').defaultTo(false)
       table.boolean('create_posts').defaultTo(false)
       table.boolean('create_products').defaultTo(false)
       table.boolean('create_tickets').defaultTo(false)
+      table.boolean('give_balances').defaultTo(false)
       table.boolean('view_payment_history').defaultTo(false)
+      table.timestamps()
     })
   }
 

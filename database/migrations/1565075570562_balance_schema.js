@@ -9,6 +9,7 @@ class BalanceSchema extends Schema {
       table.increments()
       table.integer('account_id').references('id').inTable('accounts')
       table.integer('current').unsigned().nullable()
+      table.datetime('last_charged')
     })
   }
 
