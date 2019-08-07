@@ -1,3 +1,4 @@
+<!
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +16,12 @@
 .bgimg{
  width: 100%;
  height: 100vh;
- background-image: linear-gradient(27deg, #ff33cc 50%, #e3319d 100%);
+ 
  opacity: 0.9;
 }
 
 .centerdiv{
+ opacity: 0.7;
  width: 350px;
  height: 400px;
  position: absolute;
@@ -27,7 +29,13 @@
  left: 50%;
  background-color: red;
  transform: translate(-50%, -50%);
- background-image: linear-gradient(27deg, #013A6B 50%, #004E95 50%);
+ background: rgba(255,33,114,1);
+ background: -moz-linear-gradient(-45deg, rgba(255,33,114,1) 0%, rgba(159,72,240,1) 100%);
+ background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,33,114,1)), color-stop(100%, rgba(159,72,240,1)));
+ background: -webkit-linear-gradient(-45deg, rgba(255,33,114,1) 0%, rgba(159,72,240,1) 100%);
+ background: -o-linear-gradient(-45deg, rgba(255,33,114,1) 0%, rgba(159,72,240,1) 100%);
+ background: -ms-linear-gradient(-45deg, rgba(255,33,114,1) 0%, rgba(159,72,240,1) 100%);
+ background: linear-gradient(135deg, rgba(255,33,114,1) 0%, rgba(159,72,240,1) 100%);
  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
@@ -52,8 +60,11 @@ h2{
 }
 
 .inputbox{
- width: calc(100% - 40px);
- height: 30px;
+ border: 2px solid blue;
+ padding: 15px;
+ border-radius: 30px;
+ width: calc(100% - 50px);
+ height: 40px;
  display: block;
  margin: auto;
  padding: 0 10px;
@@ -66,8 +77,11 @@ h2{
 }
 
 button{
- width: calc(100% - 40px);
- height: 30px;
+ border: 2px solid blue;
+ padding: 10px;
+ border-radius: 20px;
+ width: calc(100% - 50px);
+ height: 40px;
  display: block;
  margin: auto;
  color: white;
@@ -76,14 +90,15 @@ button{
 }
 
 .FORGOT-SECTION{
- width: calc(100% - 40px);
- line-height: 30px;
+ width: calc(100% - 50px);
+ line-height: 25px;
  display: block;
  margin: auto;
  color: white;
- background-color: dodgerblue;
+ background-color: #0A84C6;
  text-transform: uppercase;
  font-size: 0.8em;
+ font-family: arial;
  text-align: right;
  padding-right: 20px;
  box-sizing: border-box;
