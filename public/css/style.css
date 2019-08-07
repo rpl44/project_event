@@ -1030,9 +1030,9 @@ i:before {
 }
 
 .service_item i {
-  background-image: -moz-linear-gradient(180deg, #20d497 0%, #744fff 100%);
-  background-image: -webkit-linear-gradient(180deg, #20d497 0%, #744fff 100%);
-  background-image: -ms-linear-gradient(180deg, #20d497 0%, #744fff 100%);
+  background-image: -moz-linear-gradient(180deg, #ff2172 0%, #9f48f0 100%);
+  background-image: -webkit-linear-gradient(180deg, #ff2172  0%, #9f48f0 100%);
+  background-image: -ms-linear-gradient(180deg, #ff2172 0%, #9f48f0 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
