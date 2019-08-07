@@ -1,5 +1,6 @@
 section.pricing {
-  background: url(../img/) no-repeat fixed center center;
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
 }
 
 .pricing .card {
