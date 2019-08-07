@@ -6,7 +6,6 @@ const Model = use('Model')
 class Permission extends Model {
     account(){
         return this.hasOne('App/Models/Account')
-        table.timestamps()
     }
 }
 
