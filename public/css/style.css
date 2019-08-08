@@ -2052,6 +2052,9 @@ i:before {
   .embed-float {
     top: 0%;
   }
+  .screen-detection{
+    overflow:hidden!important;
+  }
 }
 /* End Footer Area css
 ============================================================================================ */
