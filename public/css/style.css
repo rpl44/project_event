@@ -1163,13 +1163,12 @@ i:before {
 
 .l_news_item .l_news_content {
   border: 1px solid #ebebeb;
-  border-top: 0px;
   padding: 30px 35px;
 }
 
 .l_news_item .l_news_content h4 {
   font-size: 18px;
-  color: #232d37;
+  color: #000;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   -webkit-transition: all 400ms linear 0s;
@@ -1178,7 +1177,7 @@ i:before {
 }
 
 .l_news_item .l_news_content h4:hover {
-  color: #2bc0a4;
+  color: #ff33cc;
 }
 
 .l_news_item .l_news_content p {
