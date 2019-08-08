@@ -28,7 +28,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active"><a class="nav-link smooth-class" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link smooth-class" href="#about"> About</a></li>
-                        <li class="nav-item"><a class="smooth-class" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-class" href="#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link smooth-class" href="#pricing">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link smooth-class" href="#maps">Contact</a></li>
                     </ul>
@@ -476,21 +476,6 @@ function topFunction() {
         <script src="vendors/tweet/script.js"></script>
 
         <script src="js/theme.js"></script>
-        <script>
-            var btnContainer = document.getElementById("navbarSupportedContent");
-
-            // Get all buttons with class="btn" inside the container
-            var btns = btnContainer.getElementsByClassName("nav-item");
-
-            // Loop through the buttons and add the active class to the current/clicked button
-            for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-            }
-        </script>
         <script>
             $(document).ready(function(){
                 $(".smooth-class").on('click', function(event) {
