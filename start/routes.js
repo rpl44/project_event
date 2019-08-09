@@ -20,3 +20,9 @@ Route.on('/').render('index')
 Route.on('/static').render('static')
 Route.on('/login').render('login')
 Route.on('/register').render('register')
+
+Route.group(() =>{
+    Route.get('/', 'ApiController.index');
+    Route.post('/register', 'ApiController.register');
+    Route.post('/login', 'ApiController.login');
+}).prefix('api/')
