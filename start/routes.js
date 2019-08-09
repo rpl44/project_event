@@ -26,3 +26,5 @@ Route.group(() =>{
     Route.post('/register', 'ApiController.register');
     Route.post('/login', 'ApiController.login');
 }).prefix('api/')
+
+Route.post('/register','AuthController.add_account')

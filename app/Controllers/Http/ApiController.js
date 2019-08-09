@@ -23,6 +23,7 @@ class ApiController {
         const account_request = await request.only(['name', 'username', 'password'])
         if(!account_request) return response.json({error: "please insert [name, username, password]"})
         const address = await Address.create()
+        
         const account = await Account.create({
             username: account_request.username,
             password: account_request.password,
