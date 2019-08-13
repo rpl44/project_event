@@ -8,6 +8,7 @@ class AuthTokenSchema extends Schema {
     this.create('auth_tokens', (table) => {
       table.increments()
       table.integer('account_id').references('id').inTable('accounts')
+      table.text('client_token')
       table.text('access_token')
       table.text('refresh_token')
       table.datetime('expired_at').nullable()

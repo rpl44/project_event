@@ -129,29 +129,52 @@ h2{
    <section id="register" class="section register">
    <div class="centerdiv">
     <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" id="profilepic">
-    <h2>Register</h2>
-    <form>
+    <h2>Register</h2><span id="message"></span>
+    <form method="POST">
+        {{ csrfField() }}
      <div>
-      <input type="text" name="" class="inputbox" placeholder="Name">
+      <input type="text" name="in_name" class="inputbox" placeholder="Name">
      </div>
      <div>
      <br>
-      <input type="text" name="" class="inputbox" placeholder="Username">
+      <input type="text" name="in_username" class="inputbox" placeholder="Username">
      </div>
      <div><br>
-      <input type="password" name="" class="inputbox" placeholder="Password">
+      <input type="password" id="1" name="in_password" class="inputbox" placeholder="Password">
      </div>
      <div><br>
-      <input type="password" name="" class="inputbox" placeholder="Confirm Passowrd">
+      <input type="password" id="2" name="in_password_confirm" class="inputbox" placeholder="Confirm Password">
+      
      </div>
       <br>
      <div>
-    <center> <a class="button">Register</a>
+    <center> <button type="submit" id="regis_button" class="button" disabled='true'>Register</button>
      </div></center>
       &nbsp;&nbsp;&nbsp;<a href="login">Back to Login?</a>
     </form> <br>
    </div>
   </div>
-  
+  <script src="js/jquery-3.2.1.min.js"></script>
+ <script>
+   $(document).ready( function(){
+        var confirm_pass = $("#2");
+        confirm_pass.keyup( function () {
+        var pass = $("#1").val();
+        console.log(pass + confirm_pass.val())
+        if(confirm_pass.val() == pass){
+          $(".warn").remove();
+          $("#regis_button").attr("disabled",false);
+        }
+        else{
+          $("#regis_button").attr("disabled", true);
+            if($(".warn").length == 0){
+              $("#message").append( "<p class='warn'>The password didn't match</p>" );
+            }
+          
+        }
+      });
+   });
+ </script>
  </body>
+ 
 </html>
