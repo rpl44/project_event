@@ -11,6 +11,7 @@ class PostSchema extends Schema {
       table.string('title',255).notNullable()
       table.text('path_url').notNullable()
       table.timestamps()
+      table.datetime('deleted_at').nullable()
     })
   }
 

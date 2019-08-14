@@ -1,6 +1,7 @@
 section.pricing {
   background: #D3D3D3;
-  background: url(../img/home-slider/slider-1.jpg);
+  background: url(../img/pricing.jpg);
+
 }
 
 .pricing .card {
@@ -57,7 +58,6 @@ section.pricing {
 
 .pricing .btn {
   font-size: 80%;
-  border-radius: 5rem;
   letter-spacing: .1rem;
   font-weight: bold;
   padding: 1rem;

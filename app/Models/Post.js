@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Post extends Model {
+    static get hidden(){
+        return ['updated_at', 'deleted_at']
+    }
     post_actions(){
         return this.hasMany('App/Models/')
     }
