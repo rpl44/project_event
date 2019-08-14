@@ -22,9 +22,15 @@ Route.on('/login').render('login')
 Route.on('/register').render('register')
 
 Route.group(() =>{
-    Route.get('/', 'ApiController.index');
-    Route.post('/register', 'ApiController.register');
-    Route.post('/login', 'ApiController.login');
-}).prefix('api/')
+    // [o] HTTP - GET
+    Route.get('/post/:id?', 'ApiController.post_data')
+    Route.get('/event/:id?', 'ApiController.event_data')
+    Route.get('/address/:id?', 'ApiController.address_data')
+    Route.get('/account/:id?', 'ApiController.account_data')
+    // [o] HTTP - POST
+    Route.post('/init_token', 'ApiController.initialize')
+    Route.post('/register', 'ApiController.register')
+    Route.post('/login', 'ApiController.login')
+}).prefix('api/v1')
 
 Route.post('/register','AuthController.add_account')
