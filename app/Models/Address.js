@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Address extends Model {
+    static get hidden(){
+        return ['created_at', 'updated_at', 'deleted_at']
+    }
     account(){
         return this.hasOne('App/Models/Account')
     }
