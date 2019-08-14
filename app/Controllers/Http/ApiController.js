@@ -46,7 +46,7 @@ class ApiController {
         responseJSON.meta.code = 201
         responseJSON.meta.status = "success"
         responseJSON.meta.message = "An email verification has been sent to "+request.data.email+", please check the email box"
-        responseJSON.data = []
+        responseJSON.data = {account}
 
         await Mail.send('email.verify', request.data.account.toJSON(), message => {
             message.to(request.data.email).from('noreply@event.com').subject('Project Event')
