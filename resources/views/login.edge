@@ -14,11 +14,33 @@
 }
 
 .bgimg{
- width: 100%;
- height: 100vh;
- 
- opacity: 0.9;
+ background-color:#ec008c; height:731px; width:1473px;
+-webkit-animation: color 5s ease-in 0s infinite alternate running;
+-moz-animation: color 5s linear  0s infinite alternate running;
+animation: color 5s linear  0s infinite alternate running;
 }
+ /* Animasi &amp; Prefix untuk beberapa browser */
+@-webkit-keyframes color{
+0%{background-color:#ec008c;}
+32%{background-color:#fc6767;}
+55%{background-color:#ec008c;}
+76%{background-color:#fc6767;}
+100{background-color:#ec008c;}
+}
+@-moz-keyframes color{
+0%{background-color:#ec008c;}
+32%{background-color:#fc6767;}
+55%{background-color:#ec008c;}
+76%{background-color:#fc6767;}
+100{background-color:#ec008c;}
+}
+@keyframes color{
+0%{background-color:#ec008c;}
+32%{background-color:#fc6767;}
+55%{background-color:#ec008c;}
+76%{background-color:#fc6767;}
+100{background-color:#ec008c;}
+} 
 
 .centerdiv{
  opacity: 0.7;
@@ -108,19 +130,36 @@ h2{
 }
 
 
-.FORGOT-SECTION{
- width: calc(100% - 50px);
- line-height: 25px;
- display: block;
- margin: auto;
- color: white;
- background-color: #0A84C6;
- text-transform: uppercase;
- font-size: 0.8em;
- font-family: arial;
- text-align: right;
- padding-right: 20px;
- box-sizing: border-box;
+.forgot {
+  height: 30px;
+  width: 120px;
+  line-height: 48px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  border-radius: 2.5px;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e3319d), color-stop(51%, #ff33cc), to(#ff66cc));
+  background-image: -webkit-linear-gradient(left, #e3319d 0%, #ff33cc 51%, #ff00cc 100%);
+  background-image: -o-linear-gradient(left, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
+  background-image: linear-gradient(to right, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
+  text-align: center;
+  position: relative;
+  background-size: 200% auto;
+  z-index: 2;
+  display: block;
+  -webkit-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  border: 0;
+}
+
+.forgot:hover {
+  background-position: right center;
+  color: #ffffff;
+  cursor:pointer;
+}
 
 }
 </style>
@@ -143,7 +182,8 @@ h2{
       <center> <a class="button">Login</a>
      </div></center>
     </form>
-    <div class="FORGOT-SECTION">
+    <br>
+    <div class="forgot">
      <h4>Forget Password?</h4>
     </div>
    </div>
