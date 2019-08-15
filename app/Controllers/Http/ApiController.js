@@ -8,7 +8,7 @@ const AuthToken = use('App/Models/AuthToken')
 const Address = use('App/Models/Address')
 const Post = use('App/Models/Post')
 const Event = use('App/Models/Event')
-
+const Env = use('Env')
 const responseJSON = {
     meta: {
         code: 200,
@@ -46,7 +46,11 @@ class ApiController {
         responseJSON.meta.code = 201
         responseJSON.meta.status = "success"
         responseJSON.meta.message = "An email verification has been sent to "+request.data.email+", please check the email box"
-        responseJSON.data = {account}
+        responseJSON.data = {
+            account: request.data.account,
+            confirm_url: `${Env.get('APP_URL')}/api/v1/register/confirm/${request.data.account.username}`,
+            expired_at: ""
+        }
 
         await Mail.send('email.verify', request.data.account.toJSON(), message => {
             message.to(request.data.email).from('noreply@event.com').subject('Project Event')
