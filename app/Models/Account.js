@@ -17,7 +17,9 @@ class Account extends Model {
          */
         this.addHook('beforeSave', async (userInstance) => {
           if (userInstance.dirty.password) {
-            userInstance.password = await Hash.make(userInstance.password)
+            const hash = await Hash.make(userInstance.password)
+            const hashed = hash.replace(/\//g, '');
+            userInstance.password = hashed
           }
         })
     }
