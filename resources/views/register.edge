@@ -153,7 +153,6 @@ float:right;
   background-image: -ms-linear-gradient(180deg,#232526 0%, #414345 100%);
   cursor:pointer;
 }
-
 </style>
 </head>
 <body>
@@ -174,30 +173,31 @@ float:right;
 <a class="button_waterpump" href="#">Log In</a>
 </div></center>
 <form>
+  {{ csrfField() }}
 <font face="Poppins">
 <br><br>
 <div>
 &emsp;&emsp;<font face="bauhaus">Full Name
 <div>
-&emsp;&emsp;<input type="text" name="" class="inputbox">
+&emsp;&emsp;<input type="text" name="in_name" class="inputbox">
 </div>
 <br>
 <div>
-&emsp;&emsp;Email<br> &emsp;&emsp;<input type="text" name="" class="inputbox">
+&emsp;&emsp;Email<br> &emsp;&emsp;<input type="text" name="in_email" id="email" class="inputbox">
+</div>
+<span></span>
+<div>
+&emsp;&emsp;Username<br> &emsp;&emsp;<input type="text" name="in_username" class="inputbox">
 </div>
 <br>
 <div>
-&emsp;&emsp;Username<br> &emsp;&emsp;<input type="text" name="" class="inputbox">
+&emsp;&emsp;Password<br> &emsp;&emsp;<input type="password" name="in_password" id="password" class="inputbox">
 </div>
 <br>
 <div>
-&emsp;&emsp;Repeat Password<br> &emsp;&emsp;<input type="password" name="" class="inputbox">
-</div>
-<br>
-<div>
-&emsp;&emsp;Repeat Password<br> &emsp;&emsp;<input type="password" name="" class="inputbox">
+&emsp;&emsp;Repeat Password<br> &emsp;&emsp;<input type="password" name="in_repeat" id="repeat" class="inputbox">
 </div></b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox">i agree to the <b>Terms of User</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="term" type="checkbox">i agree to the <b>Terms of User</b>
 <br></font>
 <br>
 <div>
@@ -208,4 +208,36 @@ float:right;
 <a class="rd_btn">Sign In</a>
 </div>
 </form>
-</div></body></html>
+</div>
+<script src='js/jquery-3.2.1.min.js'></script>
+  <script>
+    $(document).ready(function(){
+      $('#email').blur(function () {
+          var error_email = '';
+          var email = $('#email').val();
+          var _token = $('input[name="_csrf"]').val();
+          var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9_\.\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+          if (!filter.test(email)) {
+            
+          }
+          else{
+            $.ajax({
+              url:"{{route('')}}",
+              method:"POST",
+              data:{email:email, _csrf:_csrf},
+              success:function (result) {
+                if(result == 'unique'){
+                  $('#error_email').html('<label>not yet registered</label>');
+                  $('#register').attr('disabled',false);
+                }
+                else{
+                  $('#error_email').html('<label>email have been registered</label>');
+                }
+              }
+            })
+          }
+      });
+    })
+  </script>
+</body></html>

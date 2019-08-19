@@ -9,6 +9,8 @@ const Address = use('App/Models/Address')
 const Post = use('App/Models/Post')
 const Event = use('App/Models/Event')
 const Env = use('Env')
+
+// Response Builder
 const responseJSON = {
     meta: {
         code: 200,
@@ -38,7 +40,7 @@ class ApiController {
         return response.status(responseJSON.meta.code).json(responseJSON)
     }
 
-    // Register
+    // Account - Registration
     async register({request, response}){
         request.data = request.all()
         if(request.data){
@@ -107,14 +109,14 @@ class ApiController {
     }
     // Confirm token
     async confirm_token({response, params}){
-        if(!params.confirm){
+        if(!params.confirm_token){
             responseJSON.meta.code = 404
             responseJSON.meta.status = "failed"
             responseJSON.meta.message = "Confirmation token was not found"
             responseJSON.data = []
         }
 
-        const account = await Account.findBy('password', params.confirm)
+        const account = await Account.findBy('password', params.confirm_token)
         const expired_at = account.created_at
         const date = new Date()
         if(`${date.getDate()}:${date.getMonth()+1}:${date.getFullYear()}` <= `${date.getDate(expired_at)+1}:${date.getMonth(expired_at)+1}:${date.getFullYear(expired_at)}`){
@@ -163,13 +165,14 @@ class ApiController {
         return response.status(responseJSON.meta.code).json(responseJSON)
     }
 
+    // Update account data
     async account_update({request, response, params}){
         request.data = request.all()
         if(!request.data){
             responseJSON.meta.code = 404
             responseJSON.meta.status = "failed"
             responseJSON.meta.message = "Invalid form"
-            responseJSON.data = []            
+            responseJSON.data = []
         }
         const account = await Account.find(params.id)
         if(account){
@@ -224,6 +227,12 @@ class ApiController {
                 responseJSON.meta.message = "Account has been deleted"
                 responseJSON.data = account
             }
+        }
+        else{
+            responseJSON.meta.code = 404
+            responseJSON.meta.status = "failed"
+            responseJSON.meta.message = "Invalid Account ID"
+            responseJSON.data = []
         }
         return response.status(responseJSON.meta.code).json(responseJSON)
     }

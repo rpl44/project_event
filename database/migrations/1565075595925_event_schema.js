@@ -8,7 +8,6 @@ class EventSchema extends Schema {
     this.create('events', (table) => {
       table.increments()
       table.integer('account_id').references('id').inTable('accounts')
-      table.integer('event_id').references('id').inTable('events')
       table.string('title', 255).notNullable()
       table.text('description').nullable()
       table.integer('price').notNullable().unsigned()

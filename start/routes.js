@@ -23,28 +23,35 @@ Route.on('/register').render('register')
 
 Route.group(() =>{
     
-    // [ INITIALIZATION ]
-    Route.get('/init_token', 'ApiController.initialize')
+    // [ Initialization ]
+    Route.get('/init_token', 'InitController.api_initialize')
 
-    // [ LOGIN & REGISTER & CONFIRM ]
-    Route.post('/login', 'ApiController.login')
-    Route.post('/register', 'ApiController.register')
-    Route.get('/register/confirm/:confirm?', 'ApiController.confirm_token')
+    // [ Register ]    
+    Route.post('/register', 'RegisterController.api_register')
+    Route.get('/register/confirm/:confirm_token?', 'RegisterController.api_verification')
 
-    // [============================================ [ CORE DATA ] =================================================]
-        // [ ACCOUNT ]
-        Route.get('/account', 'ApiController.account_data')
-        Route.get('/account/:id', 'ApiController.account_data')
-        Route.put('/account/update/:id', 'ApiController.account_update')
-        Route.delete('/account/delete/:id', 'ApiController.account_delete')
+    // [ Login ]
+    Route.post('/login', 'LoginController.api_login')
 
-        // [ EVENT ]
-        Route.get('/event/:id?', 'ApiController.event_data')
+    // [ Account ]
+    Route.get('/account', 'AccountController.api_collection')
+    Route.get('/account/:id', 'AccountController.api_collection')
+    Route.put('/account/update/:id', 'AccountController.api_update')
+    Route.delete('/account/delete/:id', 'AccountController.api_delete')
 
-        // [ FEED & POST ]
-        Route.get('/post/:id?', 'ApiController.post_data')
-    
-    // [============================================ [ CORE DATA ] =================================================]
+    // [ Event ]
+    Route.get('/event/', 'EventController.api_collection')
+    Route.get('/event/:id', 'EventController.api_collection')
+    Route.post('/event/create', 'EventController.api_create')
+    Route.put('/event/update/:id', 'EventController.api_update')
+    Route.delete('/event/delete/:id', 'EventController.api_data')
+
+    // [ Post ]
+    Route.get('/post/', 'PostController.api_collection')
+    Route.get('/post/:id', 'PostController.api_collection')
+    Route.post('/post/create', 'PostController.api_create')
+    Route.put('/post/update/:id', 'PostController.api_update')
+    Route.delete('/post/delete/:id', 'PostController.api_delete')
         
 }).prefix('api/v1')
 

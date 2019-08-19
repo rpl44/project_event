@@ -8,7 +8,7 @@ class BalanceSchema extends Schema {
     this.create('balances', (table) => {
       table.increments()
       table.integer('account_id').references('id').inTable('accounts')
-      table.integer('current').unsigned().nullable()
+      table.integer('current').unsigned().defaultTo(0)
       table.datetime('last_charged')
     })
   }
