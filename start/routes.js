@@ -57,4 +57,6 @@ Route.group(() =>{
         
 }).prefix('api/v1')
 
+Route.post('/', 'email.')
+
 Route.post('/register','AuthController.add_account')
