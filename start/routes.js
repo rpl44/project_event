@@ -57,6 +57,6 @@ Route.group(() =>{
         
 }).prefix('api/v1')
 
-Route.post('/', 'email.')
+Route.post('/check', 'RegisterController.check').as('checkemail')
 
 Route.post('/register','AuthController.add_account')
