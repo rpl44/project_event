@@ -20,6 +20,8 @@ Route.on('/').render('index')
 Route.on('/static').render('static')
 Route.on('/login').render('login')
 Route.on('/register').render('register')
+Route.on('/partner').render('partner')
+Route.on('/register').render('register')
 
 Route.group(() =>{
     // [o] HTTP - GET
