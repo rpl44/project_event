@@ -2,6 +2,7 @@
 
 const Hash = use('Hash')
 const Account = use('App/Models/Account')
+const AuthToken = use('App/Models/AuthToken')
 
 const responseJSON = {
     meta: {
@@ -26,11 +27,17 @@ class LoginController {
             if(account_data) {
                 const password_verify = await Hash.verify(request.data.password, account_data.password)
                 if(password_verify) {
+                    const token_data = await AuthToken.query()
+                    .where({
+                        account_id: account_data.account_id
+                    })
+                    .first()
+
                     responseJSON.meta.code = 200
                     responseJSON.meta.status = "success"
                     responseJSON.meta.message = "Login success"
                     responseJSON.data = {
-                        access_token: request.access_token
+                        access_token: token_data.access_token
                     }
                 }
             }

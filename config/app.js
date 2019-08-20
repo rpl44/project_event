@@ -239,5 +239,7 @@ module.exports = {
     sameSite: false,
     path: '/',
     maxAge: 7200
-  }
+  },
+
+  aes_key: "95327FB468A0C2467XC28A624BE0F139"
 }
