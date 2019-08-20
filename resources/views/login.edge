@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="tabbing.css">
+	<link rel="stylesheet" type="text/css" href="login.css">
+<!-- Tab links -->
+<!-- Tab content -->
+<div id="User" class="tabcontent">
+  <section id="login" class="section login">
+   <div class="centerdiv">
+     
+    <form>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'User')">USER</button>
+            <button class="tablinks" onclick="openCity(event, 'Patner')">PATNER</button>
+            
+          </div>
+          
+      <br>
+      <div>
+      <center><input type="text" id="username" class="inputbox" name="username" placeholder="username"></center>
+    </div>
+     <br>
+    <div>
+    <center><input type="Password" id="password" name="password" class="inputbox" placeholder="Password"></center>
+     </div>
+    <br>
+    <div>
+      <center><h3><a class="button">LOG IN</a></h3></center>
+     </div>
+    </form>
+   </div>
+  </div>
+
+<div id="Patner" class="tabcontent">
+  <section id="login" class="section login">
+   <div class="centerdiv">
+    <form>
+      <br>
+      <div>
+      <center><input type="text" id="username" class="inputbox" name="username" placeholder="username"></center>
+    </div>
+     <br>
+    <div>
+    <center><input type="Password" id="password" name="password" class="inputbox" placeholder="Password"></center>
+     </div>
+    <br>
+    <div>
+      <center><h3><a class="button">LOG IN</a></h3></center>
+     </div>
+    </form>
+   </div>
+  </div>
+</body>
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</html>
