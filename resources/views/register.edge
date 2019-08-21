@@ -94,17 +94,28 @@
             .btn{
                 box-shadow: none!important;
             }
+            @media screen and (max-width: 500px) {
+                html, body {
+                    overflow: visible!important;
+                }
+                #kiri {
+                    height: 5%;
+                }
+                #kanan {
+                    margin-bottom: 7%;
+                }
+            }
         </style>
 </head>
 <body>
     <div class="container-fluid h-100" id="core">
         <div class="row justify-content-center h-100">
             <div class="col-md-8" id="kiri"></div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="kanan">
                 <div class="container h-100">
                     <div class="row align-items-center">
                             <div class="col-12 p-0">
-                                <div class="col-md-12 text-center" style="margin-top: 12.5%">
+                                <div class="col-md-12 text-center" style="margin-top: 10%">
                                     <a class="btn tombol" href="">Member</a>
                                     <a class="btn tombol" href="">Partner</a>
                                 </div>

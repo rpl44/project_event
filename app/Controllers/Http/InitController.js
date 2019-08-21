@@ -6,9 +6,9 @@ const AuthToken = use('App/Models/AuthToken')
 
 const responseJSON = {
     meta: {
-        code: 200,
-        status: "success",
-        message: "ok"
+        code: 400,
+        status: "error",
+        message: null
     },
     data: null
 }
@@ -19,8 +19,8 @@ class InitController {
         
         const token_data = await AuthToken.query()
         .where({
-            account_id: request.data.account_id,
-            client_token: request.data.secret
+            account_id: request.data.id,
+            secret: request.data.secret
         })
         .first()
 
@@ -54,7 +54,11 @@ class InitController {
             responseJSON.meta.code = 200
             responseJSON.meta.status = "success"
             responseJSON.meta.message = "initialization success"
-            responseJSON.data = cipherText
+            responseJSON.data = {
+                secret: request.data.secret,
+                access_token: cipherText,
+                refresh_token: generate_refresh
+            }
         }
         return response.status(responseJSON.meta.code).json(responseJSON)
     }

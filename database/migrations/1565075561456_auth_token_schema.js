@@ -9,9 +9,9 @@ class AuthTokenSchema extends Schema {
       table.increments()
       table.integer('account_id').references('id').inTable('accounts')
       table.text('secret').notNullable() //perma
-      table.text('access_token').notNullable()
-      table.text('refresh_token').notNullable()
-      table.datetime('expired_at').notNullable()
+      table.text('access_token')
+      table.text('refresh_token')
+      table.datetime('expired_at')
       table.timestamps()
     })
   }

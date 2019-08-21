@@ -6,7 +6,7 @@ const Hash = use('Hash')
 
 class Account extends Model {
     static get hidden(){
-        return ['password', 'deleted_at', 'created_at', 'updated_at']
+        return ['deleted_at', 'created_at', 'updated_at']
     }
     static boot () {
         super.boot()
@@ -17,9 +17,10 @@ class Account extends Model {
          */
         this.addHook('beforeSave', async (userInstance) => {
           if (userInstance.dirty.password) {
-            const hash = await Hash.make(userInstance.password)
-            const hashed = hash.replace(/\//g, '');
-            userInstance.password = hashed
+            // const hash = await Hash.make(userInstance.password)
+            // const hashed = hash.replace(/\//g, '')
+            // userInstance.password = hashed
+            userInstance.password = await Hash.make(userInstance.password)
           }
         })
     }

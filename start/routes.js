@@ -26,11 +26,11 @@ Route.on('/register').render('register')
 Route.group(() =>{
     
     // [ Initialization ]
-    Route.get('/init_token', 'InitController.api_initialize')
+    Route.post('/init_token', 'InitController.api_initialize')
 
     // [ Register ]    
     Route.post('/register', 'RegisterController.api_register')
-    Route.get('/register/confirm/:confirm_token?', 'RegisterController.api_verification')
+    Route.post('/register/confirm/:data?', 'RegisterController.api_verification')
 
     // [ Login ]
     Route.post('/login', 'LoginController.api_login')

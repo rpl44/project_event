@@ -15,6 +15,7 @@ class AccountSchema extends Schema {
       table.string('name', 255).notNullable()
       table.string('phone', 20).nullable().unique()
       table.text('avatarUrl').nullable()
+      table.string('verification_code', 20).nullable()
       table.boolean('status').defaultTo(false)
       table.timestamps()
       table.datetime('deleted_at').nullable()

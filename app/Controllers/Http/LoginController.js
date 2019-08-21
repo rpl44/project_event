@@ -23,13 +23,14 @@ class LoginController {
                 status: true,
                 deleted_at: null
             })
+            .first()
             
             if(account_data) {
                 const password_verify = await Hash.verify(request.data.password, account_data.password)
                 if(password_verify) {
                     const token_data = await AuthToken.query()
                     .where({
-                        account_id: account_data.account_id
+                        account_id: account_data.id
                     })
                     .first()
 
@@ -37,13 +38,15 @@ class LoginController {
                     responseJSON.meta.status = "success"
                     responseJSON.meta.message = "Login success"
                     responseJSON.data = {
-                        access_token: token_data.access_token
+                        secret: token_data.secret,
+                        access_token: token_data.access_token,
+                        refresh_token: token_data.refresh_token
                     }
                 }
             }
         }
 
-        response.status(responseJSON.meta.code).json(responseJSON)
+        return response.status(responseJSON.meta.code).json(responseJSON)
     }
 }
 

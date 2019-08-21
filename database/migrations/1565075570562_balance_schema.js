@@ -10,6 +10,7 @@ class BalanceSchema extends Schema {
       table.integer('account_id').references('id').inTable('accounts')
       table.integer('current').unsigned().defaultTo(0)
       table.datetime('last_charged')
+      table.timestamps()
     })
   }
 
