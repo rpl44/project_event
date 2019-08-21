@@ -1,80 +1,328 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title></title>
-</head>
-<body>
-	<link rel="stylesheet" type="text/css" href="tabbing.css">
-	<link rel="stylesheet" type="text/css" href="login.css">
-<!-- Tab links -->
-<!-- Tab content -->
-<div id="User" class="tabcontent">
-  <section id="login" class="section login">
-   <div class="centerdiv">
-     
-    <form>
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'User')">USER</button>
-            <button class="tablinks" onclick="openCity(event, 'Patner')">PATNER</button>
-            
-          </div>
+<!-- saved from url=(0027)http://localhost:3333/login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       
+      <title>Please Login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style media="screen">
+    body{
+         margin: 0;
+         padding: 0;
+         font-family: Arial, Helvetica, sans-serif;
+         background: url(../img/home-slider/slider.jpg);
+        }
+
+        html, body{
+          overflow: visible;
+        }
+
+        .centerdiv{
+         background-color: inherit;
+         float: left;
+         border: none;
+         outline: none;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         width: 380px;
+         height: 320px;
+         position: absolute;
+         border-radius: 10px;
+         top: 40%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         background-color: #fff;
+         box-shadow: 5px 20px 55px 5px #d3d3d3;
+
+        }
+
+        .tampilan{
+         background-color: inherit;
+         float: left;
+         border: none;
+         outline: none;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         width: 380px;
+         height: 320px;
+         position: absolute;
+         border-radius: 10px;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         background-color: #fff;
+        
+        }
+
+        .pilih-login{
+         background-color: inherit;
+         position: absolute;
+         top: 85%!important;
+         left: 50%!important;
+         float: left;
+         border: 1px solid;
+         outline: none;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         width: 380px;
+         height: 100px;
+         border-radius: 10px;
+         top: 80%;
+         left: 20%;
+         transform: translate(-50%, -50%);
+         background-color: #fff;
+        }
+      
+        .inputbox{
+         font-size: 13px;
+         border: 2px;
+         padding: 20px;
+         border-radius: 5px;
+         width: calc(380px);
+         height: 20px;
+         display: block;
+         margin: px;
+         box-sizing: border-box;
+         background-color: #d3d3d3;
+         opacity: 0.5;
+        }
+
+        ::placeholder{
+         letter-spacing: 2px;
+         color: black;
+        }
+
+        .button {
+          height: 40px;
+          width: 380px;
+          position: absolute;
+          top: 290px;
+          line-height: 40px;
+          color: #fff;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-size: 15px;
+          border-radius: 5px;
+          text-transform: uppercase;
+          background-image: -webkit-gradient(linear, left top, right top, from(#e3319d), color-stop(51%, #ff33cc), to(#ff66cc));
+          background-image: -webkit-linear-gradient(left, #e3319d 0%, #ff33cc 51%, #ff00cc 100%);
+          background-image: -o-linear-gradient(left, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
+          background-image: linear-gradient(to right, #ff00cc 0%, #ff33cc 51%, #ff00cc 100%);
+          text-align: center;
+          background-size: 200% auto;
+          z-index: 2;
+          display: block;
+          -webkit-transition: all 400ms ease-out;
+          -o-transition: all 400ms ease-out;
+          transition: all 400ms ease-out;
+          border: 0;
+        }
+
+        .button:hover {
+          background-position: right center;
+          color: #000000;    
+          cursor:pointer;
+        }
+
+        .btn-pilihlogin{
+          background-color: inherit; 
+          font-family: "Poppins", sans-serif;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border: 1px solid;
+          padding: 12px 16px;
+          transition: 0.3s;
+          transition: 0.3s;
+          width: 80px;
+          height: 15px;
+        }
+
+        .btn-pilihlogin:hover {
+          color: #fff;
+          font-family: "Poppins", sans-serif;
+          height: 15px;
+          width: 80px;
+          background-color: #d3d3d3;
+        } 
+
+        .btn-fb{
+          position: absolute;
+          right: 15px;
+          top: 65px;
+          background-color: inherit; 
+          font-family: "Poppins", sans-serif;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border: 1px solid;
+          padding: 12px 16px;
+          transition: 0.3s;
+          transition: 0.3s;
+          width: 95px;
+          height: 15px;
+        }
+
+        .btn-fb:hover {
+          color: #fff;
+          font-family: "Poppins", sans-serif;
+          height: 15px;
+          width: 95px;
+          background-color: #d3d3d3;
+        } 
+
+        /* Style the tab */
+        .tab {
+          left: 190px;
+          width: 380px;
+          height: 50px;
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+          border-radius: 5px; 
           
-      <br>
-      <div>
-      <center><input type="text" id="username" class="inputbox" name="username" placeholder="username"></center>
-    </div>
-     <br>
-    <div>
-    <center><input type="Password" id="password" name="password" class="inputbox" placeholder="Password"></center>
-     </div>
-    <br>
-    <div>
-      <center><h3><a class="button">LOG IN</a></h3></center>
-     </div>
-    </form>
-   </div>
-  </div>
+        }
+         
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+          background-color: inherit; 
+          font-family: "Poppins", sans-serif;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 12px 16px;
+          transition: 0.3s;
+          transition: 0.3s;
+          width: 50%;
+          height: 50px;
+        }
 
-<div id="Patner" class="tabcontent">
-  <section id="login" class="section login">
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          color: #fff;
+          font-family: "Poppins", sans-serif;
+          height: 50px;
+          width: 50%;
+          background-color: #e3319d;
+        } 
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          height: 50px;
+          background-color: #e3319d;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          text-align: center;     
+          display: none;
+          padding: 6px 12px;
+          border-top: none;
+          color: #000;
+        }
+
+  </style></head>
+  
+  <body>
+  <section id="login" class="section login"></section>
    <div class="centerdiv">
-    <form>
-      <br>
-      <div>
-      <center><input type="text" id="username" class="inputbox" name="username" placeholder="username"></center>
-    </div>
-     <br>
-    <div>
-    <center><input type="Password" id="password" name="password" class="inputbox" placeholder="Password"></center>
-     </div>
-    <br>
-    <div>
-      <center><h3><a class="button">LOG IN</a></h3></center>
-     </div>
-    </form>
-   </div>
-  </div>
-</body>
-<script>
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+                <div id="User" style="display: block;"></div>
+                <div class="tab">
+                  <center>
+                    <button class="tablinks" onclick="openCity(event, &#39;User&#39;)">USER</button>
+                    <button class="tablinks active" onclick="openCity(event, &#39;Patner&#39;)">PATNER</button>
+                  </center>
+                </div> 
+              <form>
+                <br>
+                <div>
+                  <div style="text-align: justify;">
+                    <span style="color: black; font-size: 14px;">Username or email</span></div>
+                    <input type="text" id="username" class="inputbox" name="username">
+              </div>
+               <br>
+              <div>
+                  <div style="text-align: justify;">
+                      <span style="color: black; font-size: 14px;">Password</span></div>
+               <input type="Password" id="password" name="password" class="inputbox">
+               </div>
+              <br>
+              <div style="text-align: justify;">
+                  <span style="color: black; font-size: 12px;"><input type="checkbox">Remember me</span>
+                         <a href="#"><span style="font-size: 13px;">Forgot your password?</span></a>
+              </div>
+              <div>
+                <center><h3><a class="button">LOG IN</a></h3></center>
+               </div>
+              </form>
+              </div>
+              
+            
+              <div id="Patner" class="tabcontent" style="display: block;">
+                  <div class="tampilan">
+                       
+                    <form>
+                      <br>
+                      <div>
+                        <div style="text-align: justify;">
+                          <span style="color: black; font-size: 14px;">Username or email</span></div>
+                          <input type="text" id="username" class="inputbox" name="username">
+                    </div>
+                     <br>
+                    <div>
+                        <div style="text-align: justify;">
+                            <span style="color: black; font-size: 14px;">Password</span></div>
+                     <input type="Password" id="password" name="password" class="inputbox">
+                     </div>
+                    <br>
+                    <div style="text-align: justify;">
+                        <span style="color: black; font-size: 12px;"><input type="checkbox">Remember me</span>
+                               <a href="http://localhost:3333/login#"><span style="font-size: 13px;">Forgot your password?</span></a>
+                    </div>
+                    <div>
+                      <center><h3><a class="button">LOG IN</a></h3></center>
+                     </div>
+                    </form>
+                    </div>
+                    </div>
+                    <div class="pilih-login">
+                        <p>Sign in with</p>
+                        <div class="btn-pilihlogin"><img src="img/logogo.png" width="20" height="20">&nbsp;Google
+                        <br>
+                        <div class="btn-fb"><img src="img/logofb.png" width="20" height="20">&nbsp;Facebook
+                      </div>
+                      </div>
+                    </div>
+                    
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-</html>
+            <script>
+                function openCity(evt, cityName) {
+                  // Declare all variables
+                  var i, tabcontent, tablinks;
+                
+                  // Get all elements with class="tabcontent" and hide them
+                  tabcontent = document.getElementsByClassName("tabcontent");
+                  for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                  }
+                
+                  // Get all elements with class="tablinks" and remove the class "active"
+                  tablinks = document.getElementsByClassName("tablinks");
+                  for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                
+                  // Show the current tab, and add an "active" class to the button that opened the tab
+                  document.getElementById(cityName).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+                </script>
+
+</body></html>
