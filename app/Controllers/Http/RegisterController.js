@@ -15,6 +15,30 @@ const responseJSON = {
 }
 
 class RegisterController {
+    
+    async index({view}){
+        return view('register')
+    }
+    
+    async check({request}){
+        console.log('sampe controller');
+        if (request.get('email')) {
+            var email = request.get('email')
+            const data = await Account()
+            .query()
+            .where('email',email)
+            .count()
+
+            if (data > 0) {
+                return "not unique";
+            }
+            else {
+                return "unique";
+            }
+        } 
+    }
+    
+    
     async api_register({request, response}) {
         request.data = request.all()
         if(request.data) {

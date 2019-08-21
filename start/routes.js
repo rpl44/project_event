@@ -21,7 +21,6 @@ Route.on('/static').render('static')
 Route.on('/login').render('login')
 Route.on('/register').render('register')
 Route.on('/partner').render('partner')
-Route.on('/register').render('register')
 
 Route.group(() =>{
     
@@ -56,5 +55,7 @@ Route.group(() =>{
     Route.delete('/post/delete/:id', 'PostController.api_delete')
         
 }).prefix('api/v1')
+
+Route.post('/check', 'RegisterController.check').as('checkemail')
 
 Route.post('/register','AuthController.add_account')
